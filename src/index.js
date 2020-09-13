@@ -12,6 +12,8 @@ const jscodeshift = require('jscodeshift')
  */
 const remarkJscodeshift = options => {
   const transform = require(path.join(process.cwd(), options.transform))
+  const allowNoLang = options.allowNoLang || false
+
   return transformer
 
   function transformer(tree, file) {
@@ -19,6 +21,7 @@ const remarkJscodeshift = options => {
 
     function visitor(node) {
       if (
+        !allowNoLang &&
         node.lang !== 'js' &&
         node.lang !== 'jsx' &&
         node.lang !== 'javascript'

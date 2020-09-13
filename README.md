@@ -76,6 +76,12 @@ Here is the resulting diff on `example.md`:
 This is particularly convenient when dealing with a large repository of markdown examples,
 for example if you are maintaining a styleguide with [react-styleguidist][].
 
+### Options
+
+- `transform`: File path to the jscodeshift transform file
+- `allowNoLang`: By default, remark-jscodeshift will only consider codeblocks whose language
+  is `js`, `javascript` or `jsx`. By setting this option, it will also consider codeblocks
+  with no language.
 
 [remark]: https://github.com/remarkjs/remark
 [jscodeshift]: https://github.com/facebook/jscodeshift
