@@ -15,7 +15,7 @@ Let's say you have a markdown file with explanations on how to use a React compo
 
 `example.md`
 
-```markdown
+``````markdown
 # My component
 
 To use my component, you should do:
@@ -24,15 +24,15 @@ To use my component, you should do:
 import MyComponent from 'my-ui-kit/MyComponent'
 
 <MyComponent />
-\```
-
 ```
+
+``````
 
 Now, if your component API changes, or if the path of import has changed, and you
 have written a codemod to automatically do the change, you can also apply this
 codemod to the markdown docs.
 
-Here the example automatically adds the `attr` prop with the value "value".
+Here the codemod automatically adds the `attr` prop with the value "value".
 `my-jscodeshift-transform.js`
 
 ```js
