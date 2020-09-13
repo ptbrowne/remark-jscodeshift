@@ -3,5 +3,6 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "author": "Patrick Browne <pt.browne@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/ptbrowne/remark-jscodeshift"
 }
