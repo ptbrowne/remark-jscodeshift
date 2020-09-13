@@ -66,7 +66,17 @@ remark -o --use remark-jscodeshift=transform:\"my-jscodeshift-transform.js\" Exa
 
 to automatically transform the code examples in you markdown files.
 
+Here is the resulting diff on 'example.md'
+
+```patch
+- <MyComponent />
++ <MyComponent attr="value" />
+```
+
+This is particularly convenient when dealing with a large repository of markdown examples,
+for example if you are maintaining a styleguide with [react-styleguidist][].
 
 
 [remark]: https://github.com/remarkjs/remark
 [jscodeshift]: https://github.com/facebook/jscodeshift
+[react-styleguidist]: https://github.com/styleguidist/react-styleguidist
