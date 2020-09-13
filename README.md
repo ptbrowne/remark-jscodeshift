@@ -54,19 +54,19 @@ module.exports = addPropToMyComponent;
 
 With jscodeshift, you can already do:
 
-```
+```bash
 jscodeshift -t my-jscodeshift-transform.js *.js
 ```
 
 With this plugin, you can do:
 
-```
+```bash
 remark -o --use remark-jscodeshift=transform:\"my-jscodeshift-transform.js\" Example.md
 ```
 
 to automatically transform the code examples in you markdown files.
 
-Here is the resulting diff on 'example.md'
+Here is the resulting diff on `example.md`:
 
 ```patch
 - <MyComponent />
