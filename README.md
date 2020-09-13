@@ -3,7 +3,7 @@ codeblocks through [jscodeshift][].
 
 ### Usage
 
-```
+```bash
 yarn add remark
 yarn add remark-jscodeshift
 remark -o --use remark-jscodeshift=transform:\"my-jscodeshift-transform.js\" File.md
@@ -15,16 +15,16 @@ Let's say you have a markdown file with explanations on how to use a React compo
 
 `example.md`
 
-```
+```markdown
 # My component
 
 To use my component, you should do:
 
-\`\`\`jsx
+\```jsx
 import MyComponent from 'my-ui-kit/MyComponent'
 
 <MyComponent />
-\`\`\`
+\```
 ```
 
 Now, if your component API changes, or if the path of import has changed, and you
@@ -34,7 +34,7 @@ codemod to the markdown docs.
 Here the example automatically adds the `attr` prop with the value "value".
 `my-jscodeshift-transform.js`
 
-```
+```js
 const addPropToMyComponent = (file, api) => {
   const j = api.jscodeshift
   const root = j(file.source)
