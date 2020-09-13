@@ -4,5 +4,9 @@
   "main": "src/index.js",
   "author": "Patrick Browne <pt.browne@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/ptbrowne/remark-jscodeshift"
+  "repository": "https://github.com/ptbrowne/remark-jscodeshift",
+  "dependencies": {
+    "jscodeshift": "^0.11.0",
+    "unist-util-visit": "^2.0.3"
+  }
 }
