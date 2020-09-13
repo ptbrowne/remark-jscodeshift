@@ -20,11 +20,12 @@ Let's say you have a markdown file with explanations on how to use a React compo
 
 To use my component, you should do:
 
-\```jsx
+```jsx
 import MyComponent from 'my-ui-kit/MyComponent'
 
 <MyComponent />
 \```
+
 ```
 
 Now, if your component API changes, or if the path of import has changed, and you
